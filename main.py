@@ -45,13 +45,6 @@ import pickle
 
 pickle.load = partial(pickle.load, encoding="latin1")
 pickle.Unpickler = partial(pickle.Unpickler, encoding="latin1")
-
-# python /media/Green01/data_zhangfan/code/tools/classification_multi/main.py ./evaluate_dataFrame.p -a=densenet121 -t=6 -c=10 -b=130 --gpu='0,1'   --topk=3  --resume=./2019-06-21_recent_checkpoint.pth.tar -p -e
-# https://github.com/msamogh/nonechucks.git
-
-#python test.py ./test-500-10cities.p -a=resnet18 -s=./here -b=30 -p --gpu='0,2' -c=10 -e --resume=./here/model_best.pth.tar
-#python test.py ./test-500-10cities.p -a=resnet18 -s=./here -b=10 -p --gpu='0,2' -c='1,2,3,10' -e 
-
  
 model_names = sorted(name for name in models.__dict__
     if name.islower() and not name.startswith("__")
